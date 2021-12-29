@@ -2,10 +2,10 @@ const mongoose = require('mongoose')
 
 
 mongoose.Promise = global.Promise
-const url = process.env.MONGODB_URI ? process.env.MONGODB_URI : 'mongodb+srv://Leandro:061017AnA@mymoney-backend.ola1i.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
-// module.exports = mongoose.connect('mongodb://localhost/mymoney', { useNewUrlParser: true })
+// const url = process.env.MONGODB_URI ? process.env.MONGODB_URI : 'mongodb+srv://Leandro:061017AnA@mymoney-backend.ola1i.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
+module.exports = mongoose.connect('mongodb://localhost/mymoney', { useNewUrlParser: true })
 // module.exports = mongoose.connect('mongodb+srv://Leandro:061017AnA@mymoney-backend.ola1i.mongodb.net/myFirstDatabase?retryWrites=true&w=majority')
-module.exports = mongoose.connect(url, {useNewUrlParser: true, useUnifiedTopology: true})
+// module.exports = mongoose.connect(url, {useNewUrlParser: true, useUnifiedTopology: true})
 
 
 mongoose.Error.messages.general.required = "O atributo '{PATH}'é obrigatório."
